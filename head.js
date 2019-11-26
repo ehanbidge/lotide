@@ -10,11 +10,11 @@ function head(array){
   if (array.length === 0)
     return ("undefined");
   else
-    return array[0];
+    return array.shift();
 }
 
 assertEqual(head(''), 'undefined');
-assertEqual(head([5,6,7]), 5);
-assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
-assertEqual(head([5]), 5);
+assertEqual(head([5,6,7]), [6, 7]);
+assertEqual(head(["Hello", "Lighthouse", "Labs"]), ["Lighthouse", "Labs"]);
+assertEqual(head([5]), '');
 
