@@ -8,7 +8,7 @@ const assertEqual = function(actual, expected) {
 
 
 // function eqArrays which takes in two arrays and returns true or false, based on a perfect match.
-
+/*
 const eqArrays = function(array1, array2) {
   if (array1.length !== array2.length) {
     return false;
@@ -20,12 +20,22 @@ const eqArrays = function(array1, array2) {
   }
   return true;
 };
+*/
 
-console.log(eqArrays("1, 2, 3, 4", "1, 2, 3, 4"));
-console.log(eqArrays("1, 2, 3, 4", "1, 2, 3, 4, 5"));
-console.log(eqArrays("1, 2, 3, 4", "1, 5, 3, 4"));
-console.log(eqArrays("1, 2, 3, 4", "1, 2, 3, 4"));
+const eqArrays = function(array1, array2) {
+  if (array1.length !== array2.length) {
+    return false;
+  }
+  for (let i of array1) {
+    if (array1[i] !== array2[i]) {
+      return false;
+    }
+  }
+  return true;
+};
+
 
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
 assertEqual(eqArrays([1, 2, 3], [1, 3, 3]), false); // => should PASS
 assertEqual(eqArrays([1, 2, 3, 4], [1, 2, 3]), false); // => should PASS
+assertEqual(eqArrays([1, 2], [1, 2, 3]), false); // => should PASS
