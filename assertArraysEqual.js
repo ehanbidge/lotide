@@ -6,7 +6,7 @@ const assertArraysEqual = function(array1, array2) {
     console.log(`Assertion Failed: [${array1.toString()}] !== [${array2.toString()}]`);
     return;
   }
-  for (let i of array1) {
+  for (let i in array1) {
     if (array1[i] !== array2[i]) {
       console.log(`Assertion Failed: [${array1.toString()}] !== [${array2.toString()}]`);
       return;
@@ -17,6 +17,6 @@ const assertArraysEqual = function(array1, array2) {
 };
 
 assertArraysEqual([1, 2, 3], [1, 2, 3]); // => should PASS
-assertArraysEqual([1, 2, 3], [1, 3, 3]); // => should PASS
-assertArraysEqual([1, 2, 3, 4], [1, 2, 3]); // => should PASS
-assertArraysEqual([1, 2], [1, 2, 3]); // => should PASS
+assertArraysEqual([1, 2, 3], [1, 3, 3]); // => should not PASS
+assertArraysEqual([1, 2, 3, 4], [1, 2, 3]); // => should not PASS
+assertArraysEqual([1, 2], [1, 2, 3]); // => should not PASS
