@@ -1,7 +1,10 @@
 const head = require('../head.js');
-const assertEqual = require('../assertEqual.js')
+const assertEqual = require('../assertEqual.js');
+const assertArraysEqual = require('../assertArraysEqual.js')
 
-assertEqual(head(''), 'undefined');
-assertEqual(head([5,6,7]), [6, 7]);
-assertEqual(head(["Hello", "Lighthouse", "Labs"]), ["Lighthouse", "Labs"]);
-assertEqual(head([5]), '');
+
+assertArraysEqual([1, 2, 3], [1, 2, 3]); // => should PASS
+assertArraysEqual([1, 2, 3], [1, 3, 3]); // => should not PASS
+assertArraysEqual([1, 2, 3, 4], [1, 2, 3]); // => should not PASS
+assertArraysEqual([1, 2], [1, 2, 3]); // => should not PASS
+

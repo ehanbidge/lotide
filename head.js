@@ -3,7 +3,7 @@ function head(array){
   if (array.length === 0)
     return ("undefined");
   else
-    return array.shift();
+    return array[0];
 }
 
 module.exports = head;
