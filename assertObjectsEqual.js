@@ -1,15 +1,5 @@
 
-const eqArrays = function(array1, array2) {
-  if (array1.length !== array2.length) {
-    return false;
-  }
-  for (let i of array1) {
-    if (array1[i] !== array2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
+const eqArrays = require('./eqArrays');
 
 const assertObjectsEqual = function(actual, expected) {
 
@@ -40,6 +30,8 @@ const assertObjectsEqual = function(actual, expected) {
   console.log(`${String.fromCodePoint(0x1F600)} Assertion passed: [${inspect(actual)}] === [${inspect(expected)}]`);
   return true;
 };
+
+module.exports = assertObjectsEqual;
 
 
 const ab = { a: "1", b: "2" };

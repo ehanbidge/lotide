@@ -1,10 +1,3 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`${String.fromCodePoint(0x1F600)} Assertion passed: [${actual}] === [${expected}]`);
-  } else {
-    console.log(`Assertion Failed: [${actual}] !== [${expected}]`);
-  }
-};
 
 
 // function eqArrays which takes in two arrays and returns true or false, based on a perfect match.
@@ -22,6 +15,7 @@ const eqArrays = function(array1, array2) {
 };
 */
 
+
 const eqArrays = function(array1, array2) {
   if (array1.length !== array2.length) {
     return false;
@@ -34,8 +28,11 @@ const eqArrays = function(array1, array2) {
   return true;
 };
 
+module.exports = eqArrays;
 
+/*
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
 assertEqual(eqArrays([1, 2, 3], [1, 3, 3]), false); // => should PASS
 assertEqual(eqArrays([1, 2, 3, 4], [1, 2, 3]), false); // => should PASS
 assertEqual(eqArrays([1, 2], [1, 2, 3]), false); // => should PASS
+*/
