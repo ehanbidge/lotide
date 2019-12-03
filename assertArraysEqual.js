@@ -1,7 +1,4 @@
 // take in two arrays and console.log an appropriate message to the console as to whether or not they are equal
-const eqArrays = require('./eqArrays.js');
-
-
 /*
 const assertArraysEqual = function(array1, array2) {
 
@@ -20,8 +17,10 @@ const assertArraysEqual = function(array1, array2) {
 };
 */
 
-const assertArraysEqual = function(array1, array2) {
 
+const eqArrays = require('./eqArrays.js');
+
+const assertArraysEqual = function(array1, array2) {
   if (eqArrays(array1, array2)) {
     console.log(`${String.fromCodePoint(0x1F600)} Assertion passed: [${array1.toString()}] === [${array2.toString()}]`);
     return;

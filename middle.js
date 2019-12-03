@@ -1,3 +1,4 @@
+/*
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`${String.fromCodePoint(0x1F600)} Assertion passed: [${actual}] === [${expected}]`);
@@ -21,6 +22,10 @@ const assertArraysEqual = function(array1, array2) {
   console.log(`${String.fromCodePoint(0x1F600)} Assertion passed: [${array1.toString()}] === [${array2.toString()}]`);
 
 };
+*/
+
+//const assertEqual = require('./assertEqual');
+
 
 
 function middle(arr) {
