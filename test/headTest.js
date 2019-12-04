@@ -1,10 +1,17 @@
-const head = require('../head.js');
-const assertEqual = require('../assertEqual.js');
-const assertArraysEqual = require('../assertArraysEqual.js')
 
 
-assertArraysEqual([1, 2, 3], [1, 2, 3]); // => should PASS
-assertArraysEqual([1, 2, 3], [1, 3, 3]); // => should not PASS
-assertArraysEqual([1, 2, 3, 4], [1, 2, 3]); // => should not PASS
-assertArraysEqual([1, 2], [1, 2, 3]); // => should not PASS
+const assert = require('chai').assert;
+const head   = require('../head');
 
+describe("#head", () => {
+  it("returns 1 for [1, 2, 3]", () => {
+    assert.strictEqual(head([1, 2, 3]), 1);
+  });
+  it("returns '5' for ['5']", () => {
+    assert.strictEqual(head(['5']), '5'); 
+  });
+  it("returns 2 for [2, 6, 8, 9]", () => {
+    assert.strictEqual(head([2, 6, 8, 9]), 2); 
+  });
+  
+});
