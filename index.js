@@ -13,7 +13,7 @@ const findKey = require('./findKey');
 const eqObjects = require('./eqObjects');
 const eqArrays = require('./eqArrays');
 const countOnly = require('./countOnly');
-const countLetters = require('./countLetters);
+const countLetters = require('./countLetters');
 
 /*
 
@@ -52,3 +52,4 @@ module.exports = {
   countOnly,
   countLetters
 };
+
