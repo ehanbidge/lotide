@@ -1,23 +1,5 @@
 
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`${String.fromCodePoint(0x1F600)} Assertion passed: [${actual}] === [${expected}]`);
-  } else {
-    console.log(`Assertion Failed: [${actual}] !== [${expected}]`);
-  }
-};
 
-const firstNames = [
-  "Karl",
-  "Salima",
-  "Agouhanna",
-  "Fang",
-  "Kavith",
-  "Jason",
-  "Salima",
-  "Fang",
-  "Joe"
-];
 
 // totalreps takes an array of strings and returns number of repes of second parameter string
 const totalreps = function(ary, letter) {
@@ -55,17 +37,6 @@ const countOnly = function(itemsArray, objOfParts) {
   
 };
 
-const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true });
-
-console.log(result1);
-
-/*
-assertEqual(result1["Jason"], 1);
-assertEqual(result1["Karima"], undefined);
-assertEqual(result1["Fang"], 2);
-
-*/
-// console.log(countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": false}));
 
 
 

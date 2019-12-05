@@ -1,7 +1,7 @@
 {
   "name": "lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "handy functions written as student of Lighthouse Labs",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -22,7 +22,7 @@
     "type": "git",
     "url": "git+https://github.com/ehanbidge/lotide.git"
   },
-  "author": "",
+  "author": "Ellen Hanbidge",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ehanbidge/lotide/issues"

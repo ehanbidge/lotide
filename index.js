@@ -14,27 +14,10 @@ const eqObjects = require('./eqObjects');
 const eqArrays = require('./eqArrays');
 const countOnly = require('./countOnly');
 const countLetters = require('./countLetters');
+const takeUntil = require('./takeUntil');
 
-/*
 
-module.exports = {
-  head:   head,
-  tail:   tail,
-  middle: middle,
-  without: without,
-  takeUntil: takeUntil,
-  map:      map,
-  letterPositions: LetterPositions,
-  flatten:  this.flatten,
-  findKeyByValue: findKeyByValue,
-  findKey:  findKey,
-  eqOjects: eqOjects,
-  eqArrays: eqArrays,
-  countOnly; countOnly,
-  countLetters: countLetters
-};
-*/
-
+/
 
 module.exports = {
   head,
@@ -43,13 +26,14 @@ module.exports = {
   without,
   takeUntil,
   map,
-  LetterPositions,
+  letterPositions,
   flatten,
   findKeyByValue,
   findKey,
   eqOjects,
   eqArrays,
   countOnly,
-  countLetters
+  countLetters,
+  takeUntil
 };
 
